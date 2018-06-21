@@ -1,6 +1,8 @@
 package edu.princeton.cs.algs4;
 
-public class FixedCapacityStackOfStrings<Item> {
+import java.util.Iterator;
+
+public class FixedCapacityStackOfStrings<Item> implements Iterable<Item>{
     private Item [] a;
     private int N;
 
@@ -45,6 +47,23 @@ public class FixedCapacityStackOfStrings<Item> {
         return N;
     }
 
+    public Iterator<Item> iterator(){
+        return new FixedCapacityStackOfStringsIterator();
+    }
+
+    private class FixedCapacityStackOfStringsIterator implements Iterator<Item> {
+        private int i = N;
+        public boolean hasNext() {
+            return i > 0;
+        }
+        public Item next() {
+            return a[--i];
+        }
+        public void remove(){
+            throw new UnsupportedOperationException();
+        }
+    }
+
     public static void main(String[] args) {
         FixedCapacityStackOfStrings<String> s;
         s = new FixedCapacityStackOfStrings<String>(2);
@@ -58,5 +77,10 @@ public class FixedCapacityStackOfStrings<Item> {
         }
 
         StdOut.println("(" + s.size() + " left on stack)");
+
+        for (String value : s) {
+            StdOut.println(value);
+        }
+
     }
 }
