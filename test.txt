@@ -1,0 +1,4 @@
+cd D:\algs4\algs4_exercise\src\main\java && d:
+
+javac-algs4 edu/princeton/cs/algs4/Hello.java
+java-algs4 edu.princeton.cs.algs4.Hello
