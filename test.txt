@@ -1,7 +1,7 @@
-cd D:\algs4\algs4_src\src\main\java && d:
+cd D:\chenhw\code\algs4\algs4_exercise\src\main\java && d:
 
 javac-algs4 edu/princeton/cs/algs4/BinarySearch.java
 java-algs4 edu.princeton.cs.algs4.BinarySearch D:\algs4\algs4-data\tinyW.txt < D:\algs4\algs4-data\tinyT.txt
 
-javac-algs4 edu/princeton/cs/algs4/BinarySearch.java
-java-algs4 edu.princeton.cs.algs4.BinarySearch < D:\algs4\algs4-data\tinyT.txt
+javac-algs4 edu/princeton/cs/algs4/Hello.java
+java-algs4 edu.princeton.cs.algs4.Hello
