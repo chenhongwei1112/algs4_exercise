@@ -1,8 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "src\\main\\java\\edu\\princeton\\cs\\algs4"
+			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
 }
