@@ -1,0 +1,14 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.gradle": true,
+        "**/.settings": true,
+        "bin": true,
+        ".classpath": true,
+        ".gitignore": true,
+        ".project": true,
+        "*.code-workspace": true,
+        "**/.DS_Store": true
+    }
+}
