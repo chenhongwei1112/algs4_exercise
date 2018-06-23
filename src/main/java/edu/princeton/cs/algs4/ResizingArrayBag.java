@@ -1,6 +1,5 @@
 package edu.princeton.cs.algs4;
 
-import java.awt.event.ItemEvent;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
