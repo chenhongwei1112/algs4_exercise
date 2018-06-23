@@ -3,7 +3,7 @@ package edu.princeton.cs.algs4;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class LinkedStack<Item> implements Iterable<Item>{
+public class LinkedBag<Item> implements Iterable<Item>{
     private int N;
     private Node first;
 
@@ -12,7 +12,7 @@ public class LinkedStack<Item> implements Iterable<Item>{
         private Node next;
     }
 
-    public LinkedStack(int cap){
+    public LinkedBag(int cap){
         N = 0;
         first = null;
     }
@@ -41,10 +41,10 @@ public class LinkedStack<Item> implements Iterable<Item>{
     }
 
     public Iterator<Item> iterator(){
-        return new LinkedStackIterator();
+        return new LinkedBagIterator();
     }
 
-    private class LinkedStackIterator implements Iterator<Item> {
+    private class LinkedBagIterator implements Iterator<Item> {
         private Node current = first;
         public boolean hasNext() {
             return current != null;
@@ -63,8 +63,8 @@ public class LinkedStack<Item> implements Iterable<Item>{
     }
 
     public static void main(String[] args) {
-        LinkedStack<String> s;
-        s = new LinkedStack<String>(2);
+        LinkedBag<String> s;
+        s = new LinkedBag<String>(2);
         while (!StdIn.isEmpty()) {
             String new_item = StdIn.readString();
             if (!new_item.equals("-")) {
