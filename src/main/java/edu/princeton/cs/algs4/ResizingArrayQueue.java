@@ -16,7 +16,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item>{
         last = 0;
     }
 
-    public void enqueu(Item item){
+    public void enqueue(Item item){
         if (isFull()) {
             resize(2*a.length);
         }
@@ -97,7 +97,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item>{
         while (!StdIn.isEmpty()) {
             String new_item = StdIn.readString();
             if (!new_item.equals("-")) {
-                s.enqueu(new_item);
+                s.enqueue(new_item);
             }else if (!s.isEmpty()) {
                 StdOut.println("aaaa " + s.dequeue());
             }
