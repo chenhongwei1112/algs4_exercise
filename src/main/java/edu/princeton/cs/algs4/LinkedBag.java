@@ -17,19 +17,12 @@ public class LinkedBag<Item> implements Iterable<Item>{
         first = null;
     }
 
-    public void push(Item item){
+    public void addItem(Item item){
         Node old_first = first;
         first = new Node();
         first.item = item;
         first.next = old_first;
         N++;
-    }
-
-    public Item pop(){
-        Item item = first.item;
-        first = first.next;
-        N--;
-        return item;
     }
 
     public boolean isEmpty(){
@@ -63,22 +56,18 @@ public class LinkedBag<Item> implements Iterable<Item>{
     }
 
     public static void main(String[] args) {
-        LinkedBag<String> s;
-        s = new LinkedBag<String>(2);
+        LinkedBag<Integer> s;
+        s = new LinkedBag<Integer>(2);
         while (!StdIn.isEmpty()) {
-            String new_item = StdIn.readString();
-            if (!new_item.equals("-")) {
-                s.push(new_item);
-            }else if (!s.isEmpty()) {
-                StdOut.println("aaaa " + s.pop());
-            }
+            Integer new_item = StdIn.readInt();
+            s.addItem(new_item);
         }
 
-        StdOut.println("(" + s.size() + " left on stack)");
-
-        for (String value : s) {
-            StdOut.println(value);
+        int sum = 0;
+        for (Integer value : s) {
+            sum = sum + value;
         }
+        StdOut.println("AAAAAAAAAA " + sum);
 
     }
 }
