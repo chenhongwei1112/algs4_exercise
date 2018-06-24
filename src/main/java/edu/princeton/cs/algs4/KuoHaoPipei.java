@@ -1,7 +1,5 @@
 package edu.princeton.cs.algs4;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 public class KuoHaoPipei<Item> {
     public static void main(String[] args) {
         ResizingArrayStack<String> s = new ResizingArrayStack<String>(2);

@@ -12,7 +12,7 @@ public class LinkedStack<Item> implements Iterable<Item>{
         private Node next;
     }
 
-    public LinkedStack(int cap){
+    public LinkedStack(){
         N = 0;
         first = null;
     }
@@ -64,7 +64,7 @@ public class LinkedStack<Item> implements Iterable<Item>{
 
     public static void main(String[] args) {
         LinkedStack<String> s;
-        s = new LinkedStack<String>(2);
+        s = new LinkedStack<String>();
         while (!StdIn.isEmpty()) {
             String new_item = StdIn.readString();
             if (!new_item.equals("-")) {

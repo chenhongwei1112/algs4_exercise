@@ -13,7 +13,7 @@ public class LinkedQueue<Item> implements Iterable<Item>{
         private Node next;
     }
 
-    public LinkedQueue(int cap){
+    public LinkedQueue(){
         N = 0;
         first = null;
         last = null;
@@ -73,7 +73,7 @@ public class LinkedQueue<Item> implements Iterable<Item>{
 
     public static void main(String[] args) {
         LinkedQueue<String> s;
-        s = new LinkedQueue<String>(2);
+        s = new LinkedQueue<String>();
         while (!StdIn.isEmpty()) {
             String new_item = StdIn.readString();
             if (!new_item.equals("-")) {

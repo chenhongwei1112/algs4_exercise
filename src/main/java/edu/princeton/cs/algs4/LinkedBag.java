@@ -12,7 +12,7 @@ public class LinkedBag<Item> implements Iterable<Item>{
         private Node next;
     }
 
-    public LinkedBag(int cap){
+    public LinkedBag(){
         N = 0;
         first = null;
     }
@@ -57,7 +57,7 @@ public class LinkedBag<Item> implements Iterable<Item>{
 
     public static void main(String[] args) {
         LinkedBag<Integer> s;
-        s = new LinkedBag<Integer>(2);
+        s = new LinkedBag<Integer>();
         while (!StdIn.isEmpty()) {
             Integer new_item = StdIn.readInt();
             s.addItem(new_item);
